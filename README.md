@@ -10,8 +10,8 @@ $ wget https://github.com/ryotarai/go-gist/releases/download/v[VERSION]/go-gist-
 ```
 
 * [VERSION]
-* [OS]: linux, darwin
-* [ARCH]: 386, amd64
+* [OS]: linux, darwin, freebsd
+* [ARCH]: 386, amd64, arm
 
 ## Usage
 ```
