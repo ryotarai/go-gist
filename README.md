@@ -1,7 +1,7 @@
 # go-gist
 ## Installation
 ```
-$ go install github.com/ryotarai/go-gist
+$ go get github.com/ryotarai/go-gist
 ```
 
 ## Usage
