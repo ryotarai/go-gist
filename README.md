@@ -4,7 +4,7 @@
 $ go install github.com/ryotarai/go-gist
 ```
 
-### Usage
+## Usage
 ```
 $ go-gist -h
   -P=false: paste from the clipboard
