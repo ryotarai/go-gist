@@ -24,3 +24,9 @@ $ go-gist foo.txt
 $ cat foo.txt | go-gist
 ```
 
+If you are using GitHub Enterprise, you should set `GITHUB_URL`:
+
+```
+$ export GITHUB_URL="https://your-ghe"
+```
+

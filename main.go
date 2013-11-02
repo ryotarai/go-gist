@@ -12,6 +12,7 @@ import (
 	"os"
 	"os/exec"
 	"path"
+	"net/url"
 	"runtime"
 	"strings"
 )
@@ -72,7 +73,19 @@ func client() *github.Client {
 		Token: &oauth.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
 	}
 
-	return github.NewClient(t.Client())
+	client := github.NewClient(t.Client())
+	if githubURL := os.Getenv("GITHUB_URL"); len(githubURL) > 0 {
+		if !strings.HasSuffix(githubURL, "/") {
+			githubURL = githubURL + "/"
+		}
+		githubURL += "api/v3"
+		url, err := url.Parse(githubURL)
+		if err != nil {
+			log.Fatal(err)
+		}
+		client.BaseURL = url
+	}
+	return client
 }
 
 func gistFiles() map[github.GistFilename]github.GistFile {
