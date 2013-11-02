@@ -78,7 +78,7 @@ func client() *github.Client {
 		if !strings.HasSuffix(githubURL, "/") {
 			githubURL = githubURL + "/"
 		}
-		githubURL += "api/v3"
+		githubURL += "api/v3/"
 		url, err := url.Parse(githubURL)
 		if err != nil {
 			log.Fatal(err)
