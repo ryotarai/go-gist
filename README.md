@@ -9,9 +9,9 @@ $ go get github.com/ryotarai/go-gist
 $ wget https://github.com/ryotarai/go-gist/releases/download/v[VERSION]/go-gist-[OS]-[ARCH]
 ```
 
-* [VERSION]
-* [OS]: linux, darwin, freebsd
-* [ARCH]: 386, amd64, arm
+* VERSION
+* OS: linux, darwin, freebsd
+* ARCH: 386, amd64, arm
 
 ## Usage
 ```
